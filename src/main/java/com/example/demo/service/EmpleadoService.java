@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,8 +25,10 @@ public class EmpleadoService{
 	public List<Empleado> listar(){
 		return empleadoRepo.findAll();
 	}
-	
-	public void eliminar(Empleado emp) {
-		empleadoRepo.delete(emp);
+	public Optional<Empleado> buscarId(Integer id) {
+		return empleadoRepo.findById(id);
+	}
+	public void eliminar(Integer id) {
+		empleadoRepo.deleteById(id);
 	}
 }
