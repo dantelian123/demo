@@ -28,6 +28,14 @@ public class Empleado {
 	private String telefono;
 	@Column(name="fecha_nac")
 	private Date fechaNac;
+	@Column(name="ciudad")
+	private String ciudad;
+	public String getCiudad() {
+		return ciudad;
+	}
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
+	}
 	public String getNombre() {
 		return nombre;
 	}
